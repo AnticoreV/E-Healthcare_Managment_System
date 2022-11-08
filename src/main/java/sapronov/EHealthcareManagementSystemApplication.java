@@ -1,13 +1,15 @@
-package sapronov.ehealthcare_managment_system;
+package sapronov;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
-public class EHealthcareManagmentSystemApplication {
+public class EHealthcareManagementSystemApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EHealthcareManagmentSystemApplication.class, args);
-    }
+        SpringApplication.run(EHealthcareManagementSystemApplication.class, args);
 
+
+    }
 }
