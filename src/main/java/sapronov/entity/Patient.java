@@ -36,6 +36,6 @@ public class Patient {
     private String email;
     @Column(nullable = false)
     private int age;
-    @OneToOne
-    private Account account;
+//    @OneToOne
+//    private Account account;
 }

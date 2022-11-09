@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Table(name = "account",uniqueConstraints = {
-        @UniqueConstraint(name = "patient_login_unique", columnNames = "login")
+        @UniqueConstraint(name = "account_login_unique", columnNames = "login")
 })
 @Entity(name = "Account")
 public class Account {
@@ -29,5 +29,6 @@ public class Account {
     private String login;
     @Column(nullable = false)
     transient private String password;
-
+    @Column(nullable = false)
+    private String role;
 }
