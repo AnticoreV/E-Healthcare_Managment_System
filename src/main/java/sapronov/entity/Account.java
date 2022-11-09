@@ -28,7 +28,7 @@ public class Account {
     @Column(nullable = false)
     private String login;
     @Column(nullable = false)
-    transient private String password;
+    private String password;
     @Column(nullable = false)
     private String role;
 }
