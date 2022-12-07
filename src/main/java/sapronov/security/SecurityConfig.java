@@ -23,8 +23,10 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
         return http
-                .authorizeRequests(auth -> auth
-                        .anyRequest().authenticated())
+                .authorizeRequests()
+                .antMatchers("/api/home").authenticated()
+                .antMatchers("/api/admin").access("hasRole('ROLE_ADMIN')")
+                .and()
                 .formLogin(Customizer.withDefaults())
                 .userDetailsService(jpaUserDetailsService)
                 .build();
